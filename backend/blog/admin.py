@@ -9,4 +9,5 @@ class AuthorAdmin(admin.ModelAdmin):
         'slug': ('title',),
     }
 
+
 admin.site.register(models.Category)
