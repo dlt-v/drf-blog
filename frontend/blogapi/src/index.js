@@ -31,6 +31,7 @@ root.render(
             <Switch>
                 <Route exact path="/" element={App()} />
             </Switch>
+            <Footer />
         </React.StrictMode>
     </Router>
 );
