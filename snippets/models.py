@@ -13,8 +13,13 @@ STYLE_CHOICES = sorted([(item, item) for item in get_all_styles()])
 class Snippet(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=100, blank=True, default='')
+
     owner = models.ForeignKey(
-        'auth.User', related_name='snippets', on_delete=models.CASCADE),
+        'auth.User',
+        related_name='snippets',
+        on_delete=models.CASCADE
+    )
+
     highlighted = models.TextField()
     code = models.TextField()
     linenos = models.BooleanField(default=False)
